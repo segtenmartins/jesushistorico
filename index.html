@@ -1093,8 +1093,9 @@
   sections.forEach(s => navObserver.observe(s));
 
   // Back to top button visibility
-  const backBtn = document.getElementById('backToTop');
   window.addEventListener('scroll', () => {
+    const backBtn = document.getElementById('backToTop');
+    if (!backBtn) return;
     backBtn.style.opacity = window.scrollY > 400 ? '1' : '0';
     backBtn.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
   });
