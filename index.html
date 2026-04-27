@@ -1,71 +1,1091 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Ressurreição de Cristo | Análise Probabilística e Histórica</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f4f9; }
-        header { background: #1a2a6c; color: white; padding: 40px 20px; text-align: center; border-radius: 8px; margin-bottom: 30px; }
-        .section { background: white; padding: 25px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { color: #1a2a6c; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .quote { font-style: italic; color: #555; border-left: 4px solid #1a2a6c; padding-left: 15px; margin: 20px 0; }
-        .grid-6 { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-top: 20px; }
-        .question-box { background: #e8ebf5; padding: 15px; text-align: center; border-radius: 5px; font-weight: bold; color: #1a2a6c; }
-        .highlight { color: #d9534f; font-weight: bold; }
-        footer { text-align: center; font-size: 0.9em; margin-top: 50px; color: #777; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jesus Histórico — Evidências e Análise</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c9a84c;
+    --gold-light: #e8cc87;
+    --gold-dim: #7a6030;
+    --ink: #0d0a06;
+    --parchment: #f5eed8;
+    --parchment-dark: #e8ddb8;
+    --stone: #2a2318;
+    --stone-light: #3d3326;
+    --text: #2c2010;
+    --text-muted: #6b5c3a;
+    --accent-red: #8b2020;
+    --accent-blue: #1a3a5c;
+    --glow: rgba(201,168,76,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--parchment);
+    font-family: 'Crimson Pro', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 60px 20px;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse at 50% 100%, rgba(201,168,76,0.05) 0%, transparent 60%),
+      linear-gradient(180deg, #0d0a06 0%, #1a1208 50%, #0d0a06 100%);
+  }
+
+  #hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.03) 60px),
+      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201,168,76,0.03) 60px);
+    pointer-events: none;
+  }
+
+  .cross-ornament {
+    font-size: 3rem;
+    color: var(--gold);
+    opacity: 0.6;
+    margin-bottom: 20px;
+    animation: fadeDown 1.2s ease both;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.8;
+    margin-bottom: 24px;
+    animation: fadeDown 1.2s 0.1s ease both;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--parchment);
+    margin-bottom: 16px;
+    animation: fadeDown 1.2s 0.2s ease both;
+  }
+
+  .hero-title span {
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--gold-light);
+    opacity: 0.8;
+    max-width: 520px;
+    margin-bottom: 48px;
+    animation: fadeDown 1.2s 0.3s ease both;
+  }
+
+  .hero-pillars {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeDown 1.2s 0.5s ease both;
+  }
+
+  .pillar-chip {
+    border: 1px solid var(--gold-dim);
+    padding: 10px 22px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    background: rgba(201,168,76,0.04);
+  }
+
+  .pillar-chip:hover {
+    background: rgba(201,168,76,0.12);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold-dim);
+    animation: bounce 2s infinite;
+    font-size: 1.4rem;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,10,6,0.95);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    padding: 0 40px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    backdrop-filter: blur(12px);
+  }
+
+  nav::-webkit-scrollbar { display: none; }
+
+  .nav-item {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 18px 16px;
+    white-space: nowrap;
+    transition: color 0.3s;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav-item:hover, .nav-item.active {
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 80px 28px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+
+  .section-number {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--gold-dim);
+    line-height: 1;
+    min-width: 60px;
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 600;
+    color: var(--parchment);
+    line-height: 1.2;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+    margin: 40px 0;
+  }
+
+  /* ── SECTION BACKGROUNDS ── */
+  .section-wrap {
+    position: relative;
+  }
+
+  .section-wrap:nth-child(odd) {
+    background: rgba(201,168,76,0.02);
+  }
+
+  /* ── TRANSCRIPTION ── */
+  .transcript-block {
+    background: var(--stone);
+    border-left: 3px solid var(--gold);
+    padding: 28px 32px;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--parchment-dark);
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  .transcript-block::before {
+    content: '"';
+    font-family: 'Cinzel', serif;
+    font-size: 5rem;
+    color: var(--gold-dim);
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    line-height: 1;
+  }
+
+  /* ── PROBABILITY CARD ── */
+  .prob-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .prob-card {
+    background: var(--stone);
+    border: 1px solid var(--gold-dim);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+    cursor: default;
+  }
+
+  .prob-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at top left, rgba(201,168,76,0.08), transparent 70%);
+    pointer-events: none;
+  }
+
+  .prob-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+  }
+
+  .prob-num {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .prob-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--gold-dim);
+    margin-bottom: 12px;
+  }
+
+  .prob-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── PROPHECIES LIST ── */
+  .prophecy-list {
+    list-style: none;
+    margin: 24px 0;
+  }
+
+  .prophecy-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    font-size: 0.98rem;
+    color: var(--parchment-dark);
+    animation: fadeRight 0.4s ease both;
+  }
+
+  .prophecy-list li .icon {
+    color: var(--gold);
+    font-size: 0.9rem;
+    margin-top: 3px;
+    min-width: 20px;
+  }
+
+  .prophecy-list li .ref {
+    font-style: italic;
+    color: var(--gold-dim);
+    font-size: 0.88rem;
+    display: block;
+  }
+
+  /* ── TEXAS ANALOGY ── */
+  .analogy-box {
+    background: linear-gradient(135deg, var(--stone), #1f1508);
+    border: 1px solid var(--gold-dim);
+    padding: 36px;
+    margin: 32px 0;
+    position: relative;
+  }
+
+  .analogy-box .tag {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    position: absolute;
+    top: -10px;
+    left: 24px;
+    background: var(--ink);
+    padding: 2px 12px;
+  }
+
+  .analogy-box p {
+    font-size: 1rem;
+    color: var(--parchment-dark);
+    line-height: 1.75;
+  }
+
+  /* ── PETER TIMELINE ── */
+  .timeline {
+    position: relative;
+    margin: 32px 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, var(--gold-dim), var(--gold), var(--gold-dim));
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .timeline-dot {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border: 2px solid var(--gold-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    background: var(--ink);
+    position: relative;
+    z-index: 1;
+    transition: border-color 0.3s;
+  }
+
+  .timeline-item:hover .timeline-dot {
+    border-color: var(--gold);
+  }
+
+  .timeline-content h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    margin-bottom: 8px;
+    letter-spacing: 0.08em;
+  }
+
+  .timeline-content p {
+    font-size: 0.97rem;
+    color: var(--parchment-dark);
+    line-height: 1.6;
+  }
+
+  /* ── HISTORIANS TABLE ── */
+  .hist-grid {
+    display: grid;
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .hist-card {
+    background: var(--stone);
+    border: 1px solid rgba(201,168,76,0.2);
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .hist-card:hover {
+    border-color: var(--gold);
+  }
+
+  .hist-name-col {
+    background: linear-gradient(180deg, rgba(201,168,76,0.1), rgba(201,168,76,0.04));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    border-right: 1px solid rgba(201,168,76,0.15);
+    text-align: center;
+  }
+
+  .hist-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .hist-origin {
+    font-size: 0.78rem;
+    color: var(--gold-dim);
+    font-style: italic;
+  }
+
+  .hist-body {
+    padding: 20px 24px;
+  }
+
+  .hist-body h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--gold-dim);
+    margin-bottom: 8px;
+  }
+
+  .hist-body p {
+    font-size: 0.95rem;
+    color: var(--parchment-dark);
+    line-height: 1.65;
+  }
+
+  /* ── PAULO SECTION ── */
+  .paulo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .paulo-card {
+    background: var(--stone);
+    border-top: 3px solid var(--gold);
+    padding: 24px 20px;
+  }
+
+  .paulo-card h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .paulo-card p {
+    font-size: 0.93rem;
+    color: var(--parchment-dark);
+    line-height: 1.6;
+  }
+
+  /* ── CONVERGENCE ── */
+  .triangle-section {
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  .triangle-items {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .tri-item {
+    text-align: center;
+    max-width: 200px;
+  }
+
+  .tri-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .tri-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .tri-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ── VERSE HIGHLIGHT ── */
+  .verse-highlight {
+    border: 1px solid var(--gold-dim);
+    padding: 32px 40px;
+    text-align: center;
+    position: relative;
+    margin: 40px 0;
+    background: rgba(201,168,76,0.03);
+  }
+
+  .verse-highlight::before, .verse-highlight::after {
+    content: '✦';
+    color: var(--gold-dim);
+    position: absolute;
+    top: 12px;
+  }
+
+  .verse-highlight::before { left: 16px; }
+  .verse-highlight::after { right: 16px; }
+
+  .verse-text {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--parchment);
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .verse-ref {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 60px 20px;
+    border-top: 1px solid rgba(201,168,76,0.12);
+    background: rgba(0,0,0,0.3);
+  }
+
+  footer .logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: var(--gold-dim);
+    margin-bottom: 10px;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeRight {
+    from { opacity: 0; transform: translateX(-12px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  body p {
+    margin-bottom: 16px;
+  }
+
+  /* responsive */
+  @media (max-width: 600px) {
+    .hist-card { grid-template-columns: 1fr; }
+    .hist-name-col { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.15); }
+    nav { padding: 0 16px; }
+    .section { padding: 60px 20px; }
+  }
+</style>
 </head>
 <body>
 
-<header>
-    <h1>Evidências da Ressurreição</h1>
-    <p>Uma análise matemática, psicológica e histórica</p>
-</header>
+<!-- HERO -->
+<section id="hero">
+  <div class="cross-ornament">✝</div>
+  <p class="hero-eyebrow">Análise Histórica · Apologética · Evidências</p>
+  <h1 class="hero-title">
+    Jesus Histórico
+    <span>Evidências & Argumentos</span>
+  </h1>
+  <p class="hero-sub">Uma análise multidisciplinar baseada em probabilidade matemática, fontes extrabíblicas e psicologia histórica</p>
+  <div class="hero-pillars">
+    <a class="pillar-chip" href="#matematica">📐 Matemática</a>
+    <a class="pillar-chip" href="#pedro">🕊 Psicologia</a>
+    <a class="pillar-chip" href="#paulo">📜 Paulo</a>
+    <a class="pillar-chip" href="#historiadores">🏛 Historiadores</a>
+    <a class="pillar-chip" href="#convergencia">⚖️ Convergência</a>
+  </div>
+  <div class="scroll-cue">↓</div>
+</section>
 
-<div class="section">
-    <h2>1. O Argumento Matemático (A Probabilidade)</h2>
-    <p>A probabilidade matemática de a ressurreição ser real é extremamente elevada quando analisamos as profecias. [cite: 3, 8]</p>
-    <div class="quote">
-        "Para que Cristo cumprisse 48 profecias, seria necessário, na matemática, que é 1 em 10 elevado a 152. Para se ter uma ideia, isto já é maior que o número de átomos no universo inteiro." [cite: 8]
+<!-- NAV -->
+<nav id="mainnav">
+  <a class="nav-item" href="#transcricao">Transcrição</a>
+  <a class="nav-item" href="#matematica">Probabilidade</a>
+  <a class="nav-item" href="#stoner">Método Stoner</a>
+  <a class="nav-item" href="#pedro">Pedro</a>
+  <a class="nav-item" href="#paulo">Apologética de Paulo</a>
+  <a class="nav-item" href="#historiadores">Historiadores</a>
+  <a class="nav-item" href="#convergencia">Convergência</a>
+</nav>
+
+<!-- TRANSCRIÇÃO -->
+<div class="section-wrap" id="transcricao">
+  <div class="section">
+    <div class="section-header reveal">
+      <div class="section-number">00</div>
+      <div>
+        <span class="section-label">Ponto de Partida</span>
+        <h2 class="section-title">A Transcrição Original</h2>
+      </div>
     </div>
-    <p>Cristo cumpriu mais de 100 profecias, o que torna o fato estatisticamente inquestionável. [cite: 8]</p>
+
+    <div class="transcript-block reveal">
+      A ressurreição de Cristo, para mim, era um fato, até porque a probabilidade matemática de isso ser real é muito grande. Vamos lá, acerca do Cristo, o Antigo Testamento apresenta 300 profecias para o Messias. O Novo Testamento apresenta que Jesus cumpriu entre 100 a 200 delas.
+    </div>
+
+    <p class="reveal">O debate parte de uma afirmação central: a ressurreição não é apenas questão de fé, mas de <strong style="color:var(--gold)">evidência verificável</strong>. O texto estrutura sua defesa em três pilares que se reforçam mutuamente — probabilidade, testemunho e comportamento.</p>
+
+    <div class="divider"></div>
+
+    <div class="prob-grid reveal">
+      <div class="prob-card">
+        <div class="prob-num">300</div>
+        <div class="prob-label">Profecias no AT</div>
+        <div class="prob-desc">O Antigo Testamento contém cerca de 300 profecias messiânicas segundo o consenso teológico tradicional.</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-num">100–200</div>
+        <div class="prob-label">Cumpridas por Jesus</div>
+        <div class="prob-desc">O Novo Testamento narra o cumprimento de pelo menos 100 a 200 dessas profecias, variando conforme interpretação teológica.</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-num">10<sup style="font-size:1.4rem">¹⁵²</sup></div>
+        <div class="prob-label">Para 48 profecias</div>
+        <div class="prob-desc">Probabilidade calculada por Peter Stoner de um indivíduo cumprir 48 profecias por mero acaso.</div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="section">
-    <h2>2. O Argumento Psicológico (A Reação dos Discípulos)</h2>
-    <p>A mudança comportamental dos seguidores de Jesus após sua morte é uma evidência central. [cite: 12]</p>
-    <div class="quote">
-        "Psicologicamente, a reação que os discípulos de Jesus tiveram depois da ressurreição foi diferente... Pedro, então, se esconde. Quando Pedro vê Cristo ressurreto, a reação de Pedro é tamanha diferencial que, na tradição, Pedro morre crucificado." [cite: 12, 14, 15]
+<!-- MATEMÁTICA -->
+<div class="section-wrap" id="matematica">
+  <div class="section">
+    <div class="section-header reveal">
+      <div class="section-number">01</div>
+      <div>
+        <span class="section-label">Probabilidade Estatística</span>
+        <h2 class="section-title">O Argumento Matemático</h2>
+      </div>
     </div>
-    <p><strong>A lógica é clara:</strong> ninguém daria a vida por uma mentira ou uma obra de ficção. [cite: 15]</p>
+
+    <p class="reveal">O conteúdo utiliza a obra do matemático <strong style="color:var(--gold)">Peter Stoner</strong> (<em>Science Speaks</em>, 1958) para quantificar a improbabilidade de Jesus cumprir as profecias messiânicas por acaso.</p>
+
+    <div class="prob-grid reveal">
+      <div class="prob-card">
+        <div class="prob-num">8</div>
+        <div class="prob-label">Profecias · 1 em 10¹⁷</div>
+        <div class="prob-desc">O equivalente a cobrir o Texas com moedas de prata até 60 cm de altura e encontrar a única marcada — na primeira tentativa, vendado.</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-num">48</div>
+        <div class="prob-label">Profecias · 1 em 10¹⁵⁷</div>
+        <div class="prob-desc">Número que excede a estimativa total de átomos no universo observável (≈10⁸⁰), tornando o acaso estatisticamente inconcebível.</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-num">100+</div>
+        <div class="prob-label">Profecias cumpridas</div>
+        <div class="prob-desc">Jesus teria cumprido mais do dobro das 48 profecias analisadas por Stoner, amplificando exponencialmente os números.</div>
+      </div>
+    </div>
+
+    <div class="verse-highlight reveal">
+      <div class="verse-text">"Para ele cumprir 8 profecias, seria de 1 em 10 elevado a 17 — 104 milhões de vezes impossível."</div>
+      <div class="verse-ref">Transcrição Original</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-header reveal" style="margin-bottom:24px;">
+      <div>
+        <span class="section-label">Avaliação da Veracidade</span>
+        <h3 class="section-title" style="font-size:1.4rem;">As afirmações estão corretas?</h3>
+      </div>
+    </div>
+
+    <div class="prob-grid reveal">
+      <div class="prob-card">
+        <div class="prob-label" style="color:var(--gold)">✔ Matematicamente</div>
+        <div class="prob-desc">Os cálculos de Stoner existem e os números citados conferem com sua obra. Submetidos ao <em>American Scientific Affiliation</em> como estimativas conservadoras.</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-label" style="color:var(--gold)">✔ Biblicamente</div>
+        <div class="prob-desc">As referências a Paulo e às reações dos discípulos estão em conformidade com o texto do Novo Testamento.</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-label" style="color:var(--gold)">✔ Logicamente</div>
+        <div class="prob-desc">O argumento "ninguém morre conscientemente por uma mentira" é um princípio utilizado por juristas e historiadores da época.</div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="section">
-    <h2>3. O Argumento Jurídico-Histórico (A Investigação)</h2>
-    <p>Paulo coloca a ressurreição como algo investigável acerca de um ato público. [cite: 9]</p>
-    <div class="quote">
-        "Se Cristo não ressuscitou, vã é a nossa pregação, vã é a nossa fé." [cite: 10]
+<!-- STONER -->
+<div class="section-wrap" id="stoner">
+  <div class="section">
+    <div class="section-header reveal">
+      <div class="section-number">02</div>
+      <div>
+        <span class="section-label">Science Speaks · 1958</span>
+        <h2 class="section-title">O Método de Peter Stoner</h2>
+      </div>
     </div>
-    <p>Além das Escrituras, historiadores como <strong>Flávio Josefo</strong> e o romano <strong>Tácito</strong> confirmam a existência e a execução de Cristo sob Pôncio Pilatos, validando o contexto histórico do evento.</p>
+
+    <p class="reveal">Stoner não trabalhava com números arbitrários. Seu processo tinha três etapas fundamentais baseadas em <strong style="color:var(--gold)">estimativa conservadora</strong>.</p>
+
+    <ul class="prophecy-list reveal">
+      <li><span class="icon">①</span><div><strong>Princípio da Estimativa Conservadora</strong> — Apresentava uma profecia a classes de estudantes de matemática e ciência e perguntava: "Qual a probabilidade de um homem, entre todos os que já viveram, cumprir isso especificamente?" Os resultados eram então revisados pelo <em>American Scientific Affiliation</em>.</div></li>
+      <li><span class="icon">②</span><div><strong>Lei das Probabilidades Compostas</strong> — Se A = 1/10 e B = 1/100, então P(A∩B) = 1/1.000. Stoner multiplicou as probabilidades independentes de cada profecia.</div></li>
+      <li><span class="icon">③</span><div><strong>Analogia do Texas</strong> — Para tornar o número 10¹⁷ compreensível: cobrir todo o estado do Texas com moedas de prata até 60 cm de altura, marcar uma com "X", misturá-la e pedir para um homem vendado encontrá-la na primeira tentativa.</div></li>
+    </ul>
+
+    <div class="analogy-box reveal">
+      <span class="tag">AS 8 PROFECIAS DE STONER</span>
+      <ul class="prophecy-list" style="margin:0;">
+        <li><span class="icon">✦</span><div>Local de nascimento em Belém <span class="ref">Miqueias 5:2</span></div></li>
+        <li><span class="icon">✦</span><div>Precursor que prepararia o caminho <span class="ref">Malaquias 3:1</span></div></li>
+        <li><span class="icon">✦</span><div>Entrada em Jerusalém num jumento <span class="ref">Zacarias 9:9</span></div></li>
+        <li><span class="icon">✦</span><div>Traição por um amigo <span class="ref">Salmos 41:9</span></div></li>
+        <li><span class="icon">✦</span><div>Venda por 30 moedas de prata <span class="ref">Zacarias 11:12</span></div></li>
+        <li><span class="icon">✦</span><div>Dinheiro jogado no templo e usado para campo do oleiro <span class="ref">Zacarias 11:13</span></div></li>
+        <li><span class="icon">✦</span><div>Silêncio perante acusadores <span class="ref">Isaías 53:7</span></div></li>
+        <li><span class="icon">✦</span><div>Mãos e pés traspassados <span class="ref">Salmos 22:16</span></div></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<div class="section">
-    <h2>Metodologia de Análise</h2>
-    <p>Utilizamos seis perguntas fundamentais para entender a veracidade deste assunto:</p>
-    <div class="grid-6">
-        <div class="question-box">O QUE?</div>
-        <div class="question-box">ONDE?</div>
-        <div class="question-box">QUANDO?</div>
-        <div class="question-box">QUEM?</div>
-        <div class="question-box">COMO?</div>
-        <div class="question-box">POR QUÊ?</div>
+<!-- PEDRO -->
+<div class="section-wrap" id="pedro">
+  <div class="section">
+    <div class="section-header reveal">
+      <div class="section-number">03</div>
+      <div>
+        <span class="section-label">Análise Comportamental</span>
+        <h2 class="section-title">O Perfil de Pedro: de Desertor a Mártir</h2>
+      </div>
     </div>
+
+    <p class="reveal">Na psicologia forense e histórica, mudanças drásticas de comportamento sob pressão são indicadores cruciais de um evento real de alto impacto. O apóstolo Pedro é o estudo de caso central.</p>
+
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-dot">😨</div>
+        <div class="timeline-content">
+          <h4>PRÉ-RESSURREIÇÃO — O MEDO</h4>
+          <p>Pedro é descrito como alguém dominado pelo medo e insegurança diante do Império Romano. Após a morte de Cristo, ele se esconde — chegando a negar ter conhecido Jesus quando questionado por uma serva.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">⚡</div>
+        <div class="timeline-content">
+          <h4>O GATILHO — O ENCONTRO</h4>
+          <p>O texto aponta o momento em que Pedro "vê Cristo ressurreto" como o diferencial. Esse encontro é descrito como físico e visual — não apenas espiritual ou simbólico.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">✝</div>
+        <div class="timeline-content">
+          <h4>PÓS-RESSURREIÇÃO — A CORAGEM</h4>
+          <p>A reação muda de tal forma que Pedro aceita o martírio por crucificação — invertida, segundo a tradição patrística de Tertuliano e Orígenes. Ninguém daria a vida por algo que sabe que inventou.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="analogy-box reveal">
+      <span class="tag">O ARGUMENTO DO MARTÍRIO</span>
+      <p>A transcrição distingue entre <strong style="color:var(--gold-light)">crença em um ideal</strong> (alguém pode morrer por algo que acredita ser verdade mas é mentira) e <strong style="color:var(--gold-light)">testemunho ocular</strong> (é psicologicamente quase impossível que um grupo inteiro morra por algo que eles sabem que inventaram). Diferente de fãs de Harry Potter ou Star Wars, os apóstolos alegavam ser testemunhas diretas do evento.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-header reveal" style="margin-bottom:20px;">
+      <div>
+        <span class="section-label">Método Analítico</span>
+        <h3 class="section-title" style="font-size:1.3rem;">As 6 Perguntas Aplicadas a Pedro</h3>
+      </div>
+    </div>
+
+    <ul class="prophecy-list reveal">
+      <li><span class="icon">O quê?</span><div>Uma transformação radical de personalidade — de covardia extrema para bravura que resulta em martírio.</div></li>
+      <li><span class="icon">Onde?</span><div>Em Jerusalém, o centro do conflito, onde o risco era máximo e as autoridades estavam presentes.</div></li>
+      <li><span class="icon">Quando?</span><div>Imediatamente após o período em que alegaram ter visto o Cristo vivo.</div></li>
+      <li><span class="icon">Quem?</span><div>Um grupo diverso de pescadores e pessoas comuns — sem treinamento militar ou político.</div></li>
+      <li><span class="icon">Como?</span><div>Através de um evento descrito como físico e visual, não apenas espiritual.</div></li>
+      <li><span class="icon">Por quê?</span><div>Porque, na visão deles, a probabilidade matemática da profecia se encontrou com a realidade do fato.</div></li>
+    </ul>
+  </div>
 </div>
 
+<!-- PAULO -->
+<div class="section-wrap" id="paulo">
+  <div class="section">
+    <div class="section-header reveal">
+      <div class="section-number">04</div>
+      <div>
+        <span class="section-label">1 Coríntios 15 · Apologética Paulina</span>
+        <h2 class="section-title">A Lógica Jurídica de Paulo</h2>
+      </div>
+    </div>
+
+    <p class="reveal">Paulo não utiliza apenas discurso emocional. Sua estrutura é <strong style="color:var(--gold)">jurídica e investigativa</strong>. Ele apresenta a ressurreição como fato investigável e ato público.</p>
+
+    <div class="verse-highlight reveal">
+      <div class="verse-text">"Se Cristo não ressuscitou, vã é a nossa pregação, vã é a nossa fé."</div>
+      <div class="verse-ref">1 Coríntios 15:14 — Paulo de Tarso</div>
+    </div>
+
+    <p class="reveal">Para Paulo, o Cristianismo não é um sistema ético ou filosofia de autoajuda — é uma religião baseada em um <strong style="color:var(--gold)">evento histórico verificável</strong>. Se o evento for falso, o sistema inteiro colapsa. Ele remove qualquer meio-termo.</p>
+
+    <div class="paulo-grid reveal">
+      <div class="paulo-card">
+        <h4>📍 O QUE + POR QUÊ</h4>
+        <p>O argumento do "tudo ou nada". Honestidade intelectual radical: ou o evento aconteceu e muda a realidade, ou os cristãos são os mais dignos de pena de todos os homens.</p>
+      </div>
+      <div class="paulo-card">
+        <h4>👥 QUEM + COMO</h4>
+        <p>Paulo cita que Cristo apareceu a Pedro, aos doze, e a mais de 500 pessoas de uma só vez — a maioria ainda viva na época da escrita. "Vá e pergunte a eles."</p>
+      </div>
+      <div class="paulo-card">
+        <h4>🏛 ONDE + QUANDO</h4>
+        <p>A pregação ocorria no coração intelectual do Império Romano — Atenas, Corinto. Paulo escreve ≈20-25 anos após a morte de Cristo, intervalo muito curto para formação de mito.</p>
+      </div>
+    </div>
+
+    <div class="analogy-box reveal">
+      <span class="tag">SÍNTESE DA APOLOGÉTICA PAULINA</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-top:8px;">
+        <div>
+          <div style="font-family:'Cinzel',serif;font-size:0.75rem;color:var(--gold);margin-bottom:6px;">HISTÓRICO</div>
+          <p style="font-size:0.93rem;color:var(--parchment-dark);">Ancora a fé em evento datado e localizado, não em fábula.</p>
+        </div>
+        <div>
+          <div style="font-family:'Cinzel',serif;font-size:0.75rem;color:var(--gold);margin-bottom:6px;">PSICOLÓGICO</div>
+          <p style="font-size:0.93rem;color:var(--parchment-dark);">Aponta para a mudança de vida — incluindo a dele, de perseguidor a perseguido.</p>
+        </div>
+        <div>
+          <div style="font-family:'Cinzel',serif;font-size:0.75rem;color:var(--gold);margin-bottom:6px;">LÓGICO</div>
+          <p style="font-size:0.93rem;color:var(--parchment-dark);">Utiliza a impossibilidade de manter uma mentira coletiva sob pena de morte.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HISTORIADORES -->
+<div class="section-wrap" id="historiadores">
+  <div class="section">
+    <div class="section-header reveal">
+      <div class="section-number">05</div>
+      <div>
+        <span class="section-label">Fontes Extrabíblicas</span>
+        <h2 class="section-title">O Que Dizem os Historiadores Clássicos</h2>
+      </div>
+    </div>
+
+    <p class="reveal">Quando autores que <em>não tinham interesse</em> em promover o Cristianismo — e que, em alguns casos, eram hostis a ele — mencionam Jesus, a força do argumento cresce exponencialmente.</p>
+
+    <div class="hist-grid reveal">
+      <div class="hist-card">
+        <div class="hist-name-col">
+          <div class="hist-name">Flávio Josefo</div>
+          <div class="hist-origin">Judaico<br>c. 37–100 d.C.</div>
+        </div>
+        <div class="hist-body">
+          <h4>O QUE VALIDA</h4>
+          <p>Em <em>Antiguidades Judaicas</em>, descreve Jesus como "homem sábio" que realizou feitos surpreendentes e foi condenado à cruz por Pilatos. Também registra o julgamento de "Tiago, irmão de Jesus, chamado Cristo" — confirmando a existência do personagem para um historiador judeu do primeiro século.</p>
+        </div>
+      </div>
+      <div class="hist-card">
+        <div class="hist-name-col">
+          <div class="hist-name">Cornélio Tácito</div>
+          <div class="hist-origin">Romano<br>c. 56–120 d.C.</div>
+        </div>
+        <div class="hist-body">
+          <h4>O QUE VALIDA</h4>
+          <p>Considerado um dos maiores historiadores de Roma. Em <em>Anais</em>, escreve que o nome "cristãos" deriva de Cristo, que "sofreu a penalidade extrema durante o reinado de Tibério, pelas mãos de Pôncio Pilatos". Tácito chamava a crença de "superstição perniciosa" — o que torna seu relato ainda mais confiável como prova histórica.</p>
+        </div>
+      </div>
+      <div class="hist-card">
+        <div class="hist-name-col">
+          <div class="hist-name">Plínio, o Moço</div>
+          <div class="hist-origin">Romano<br>c. 61–113 d.C.</div>
+        </div>
+        <div class="hist-body">
+          <h4>O QUE VALIDA</h4>
+          <p>Em carta ao Imperador Trajano pedindo conselho sobre como lidar com os cristãos, relata que eles se reuniam antes do amanhecer para "cantar hinos a Cristo como a um deus". Prova que, poucas décadas após a morte de Jesus, ele já era adorado como divindade por um grupo que crescia rápido o suficiente para preocupar autoridades romanas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="analogy-box reveal">
+      <span class="tag">TABELA COMPARATIVA — CONVERGÊNCIA</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:12px;">
+        <div style="text-align:center;">
+          <div style="font-family:'Cinzel',serif;font-size:0.75rem;color:var(--gold);margin-bottom:6px;">JOSEFO</div>
+          <p style="font-size:0.88rem;color:var(--parchment-dark);">Existência, milagres e execução</p>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Cinzel',serif;font-size:0.75rem;color:var(--gold);margin-bottom:6px;">TÁCITO</div>
+          <p style="font-size:0.88rem;color:var(--parchment-dark);">Execução histórica sob Pilatos e Tibério</p>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Cinzel',serif;font-size:0.75rem;color:var(--gold);margin-bottom:6px;">PLÍNIO</div>
+          <p style="font-size:0.88rem;color:var(--parchment-dark);">Adoração e rápida expansão do grupo</p>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Cinzel',serif;font-size:0.75rem;color:var(--gold);margin-bottom:6px;">PAULO</div>
+          <p style="font-size:0.88rem;color:var(--parchment-dark);">Significado teológico e testemunho ocular</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONVERGÊNCIA -->
+<div class="section-wrap" id="convergencia">
+  <div class="section">
+    <div class="section-header reveal">
+      <div class="section-number">06</div>
+      <div>
+        <span class="section-label">Conclusão Analítica</span>
+        <h2 class="section-title">Triangulação de Evidências</h2>
+      </div>
+    </div>
+
+    <p class="reveal">A análise conclui que a negação da ressurreição torna-se uma posição "complicada" de sustentar quando se considera a convergência de três fontes de evidência completamente independentes.</p>
+
+    <div class="triangle-items reveal">
+      <div class="tri-item">
+        <span class="tri-icon">📐</span>
+        <span class="tri-label">PROBABILIDADE</span>
+        <span class="tri-desc">O evento era esperado. As profecias estabelecem uma expectativa matemática de um Messias específico.</span>
+      </div>
+      <div class="tri-item">
+        <span class="tri-icon">📜</span>
+        <span class="tri-label">HISTÓRIA</span>
+        <span class="tri-desc">O personagem existiu e foi executado. Confirmado por fontes romanas e judaicas hostis ao Cristianismo.</span>
+      </div>
+      <div class="tri-item">
+        <span class="tri-icon">🧠</span>
+        <span class="tri-label">PSICOLOGIA</span>
+        <span class="tri-desc">Os seguidores foram transformados de forma inexplicável — a menos que tenham testemunhado algo real e inegável.</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="verse-highlight reveal">
+      <div class="verse-text">"Essa base documental externa retira o debate do campo puramente subjetivo."</div>
+      <div class="verse-ref">Conclusão da Análise</div>
+    </div>
+
+    <p class="reveal" style="text-align:center; font-style:italic; color:var(--text-muted);">
+      Ao unir Peter Stoner (Matemática), Paulo (Lógica Jurídica) e autores como Tácito e Josefo (História), o processo investigativo sobre a ressurreição ganha uma triangulação robusta de evidências que transcende o âmbito da fé subjetiva.
+    </p>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
-    <p>Conteúdo baseado em transcrições e estudos de apologética clássica.</p>
+  <div class="logo">✝ Jesus Histórico</div>
+  <p>Análise baseada na transcrição original · Fontes: Peter Stoner, Flávio Josefo, Cornélio Tácito, Plínio, o Moço, Paulo de Tarso</p>
 </footer>
 
+<script>
+  // Intersection Observer for reveal animations
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // Active nav highlighting
+  const sections = document.querySelectorAll('[id]');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navItems.forEach(n => n.classList.remove('active'));
+        const active = document.querySelector(`.nav-item[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(s => navObserver.observe(s));
+</script>
 </body>
 </html>
