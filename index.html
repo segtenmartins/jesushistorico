@@ -7,19 +7,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --gold: #c9a84c;
-    --gold-light: #e8cc87;
-    --gold-dim: #7a6030;
-    --ink: #050d1a;
-    --parchment: #e8f0fa;
-    --parchment-dark: #c8d8ee;
-    --stone: #0d1e35;
-    --stone-light: #152840;
-    --text: #1a2a40;
-    --text-muted: #5a7a9a;
+    --gold: #1a3a6e;
+    --gold-light: #2a5298;
+    --gold-dim: #2a4a7f;
+    --ink: #ffffff;
+    --parchment: #1a1a1a;
+    --parchment-dark: #333333;
+    --stone: #f0f4f8;
+    --stone-light: #e2e8f0;
+    --text: #1a1a1a;
+    --text-muted: #555555;
     --accent-red: #8b2020;
     --accent-blue: #1a3a5c;
-    --glow: rgba(201,168,76,0.15);
+    --glow: rgba(26,58,110,0.12);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,7 +27,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--ink);
+    background: #ffffff;
     color: var(--parchment);
     font-family: 'Crimson Pro', serif;
     font-size: 26px;
@@ -46,9 +46,9 @@
     position: relative;
     padding: 60px 20px;
     background:
-      radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 70%),
-      radial-gradient(ellipse at 50% 100%, rgba(201,168,76,0.05) 0%, transparent 60%),
-      linear-gradient(180deg, #050d1a 0%, #0a1628 50%, #050d1a 100%);
+      radial-gradient(ellipse at 50% 0%, rgba(26,58,110,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse at 50% 100%, rgba(26,58,110,0.04) 0%, transparent 60%),
+      linear-gradient(180deg, #f8f4ec 0%, #f0ead8 50%, #f8f4ec 100%);
   }
 
   #hero::before {
@@ -56,8 +56,8 @@
     position: absolute;
     inset: 0;
     background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.03) 60px),
-      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201,168,76,0.03) 60px);
+      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(26,58,110,0.05) 60px),
+      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(26,58,110,0.05) 60px);
     pointer-events: none;
   }
 
@@ -98,7 +98,7 @@
   .hero-sub {
     font-size: 1.35rem;
     font-style: italic;
-    color: var(--gold-light);
+    color: var(--gold-dim);
     opacity: 0.8;
     max-width: 520px;
     margin-bottom: 48px;
@@ -123,11 +123,11 @@
     cursor: pointer;
     transition: all 0.3s;
     text-decoration: none;
-    background: rgba(201,168,76,0.04);
+    background: rgba(26,58,110,0.04);
   }
 
   .pillar-chip:hover {
-    background: rgba(201,168,76,0.12);
+    background: rgba(26,58,110,0.08);
     border-color: var(--gold);
     transform: translateY(-2px);
   }
@@ -147,8 +147,8 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(13,10,6,0.95);
-    border-bottom: 1px solid rgba(201,168,76,0.15);
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid rgba(26,58,110,0.12);
     padding: 0 40px;
     display: flex;
     gap: 8px;
@@ -229,7 +229,7 @@
   }
 
   .section-wrap:nth-child(odd) {
-    background: rgba(201,168,76,0.02);
+    background: rgba(26,58,110,0.04);
   }
 
   /* ── TRANSCRIPTION ── */
@@ -277,7 +277,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at top left, rgba(201,168,76,0.08), transparent 70%);
+    background: radial-gradient(ellipse at top left, rgba(26,58,110,0.08), transparent 70%);
     pointer-events: none;
   }
 
@@ -320,7 +320,7 @@
     align-items: flex-start;
     gap: 14px;
     padding: 14px 0;
-    border-bottom: 1px solid rgba(201,168,76,0.1);
+    border-bottom: 1px solid rgba(26,58,110,0.08);
     font-size: 1.3rem;
     color: var(--parchment-dark);
     animation: fadeRight 0.4s ease both;
@@ -342,7 +342,7 @@
 
   /* ── TEXAS ANALOGY ── */
   .analogy-box {
-    background: linear-gradient(135deg, var(--stone), #0a1a30);
+    background: linear-gradient(135deg, #e8edf3, #dde4ed);
     border: 1px solid var(--gold-dim);
     padding: 36px;
     margin: 32px 0;
@@ -357,7 +357,7 @@
     position: absolute;
     top: -10px;
     left: 24px;
-    background: var(--ink);
+    background: #ffffff;
     padding: 2px 12px;
   }
 
@@ -399,7 +399,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.6rem;
-    background: var(--ink);
+    background: #ffffff;
     position: relative;
     z-index: 1;
     transition: border-color 0.3s;
@@ -432,7 +432,7 @@
 
   .hist-card {
     background: var(--stone);
-    border: 1px solid rgba(201,168,76,0.2);
+    border: 1px solid rgba(26,58,110,0.15);
     display: grid;
     grid-template-columns: 120px 1fr;
     overflow: hidden;
@@ -444,13 +444,13 @@
   }
 
   .hist-name-col {
-    background: linear-gradient(180deg, rgba(201,168,76,0.1), rgba(201,168,76,0.04));
+    background: linear-gradient(180deg, rgba(26,58,110,0.12), rgba(26,58,110,0.05));
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 24px 16px;
-    border-right: 1px solid rgba(201,168,76,0.15);
+    border-right: 1px solid rgba(26,58,110,0.12);
     text-align: center;
   }
 
@@ -562,7 +562,7 @@
     text-align: center;
     position: relative;
     margin: 40px 0;
-    background: rgba(201,168,76,0.03);
+    background: rgba(26,58,110,0.05);
   }
 
   .verse-highlight::before, .verse-highlight::after {
@@ -595,8 +595,8 @@
   footer {
     text-align: center;
     padding: 60px 20px;
-    border-top: 1px solid rgba(201,168,76,0.12);
-    background: rgba(0,0,0,0.3);
+    border-top: 1px solid rgba(26,58,110,0.08);
+    background: rgba(0,0,0,0.04);
   }
 
   footer .logo {
@@ -646,7 +646,7 @@
   /* responsive */
   @media (max-width: 600px) {
     .hist-card { grid-template-columns: 1fr; }
-    .hist-name-col { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.15); }
+    .hist-name-col { border-right: none; border-bottom: 1px solid rgba(26,58,110,0.12); }
     nav { padding: 0 16px; }
     .section { padding: 60px 20px; }
   }
@@ -859,7 +859,7 @@
 
     <div class="analogy-box reveal">
       <span class="tag">O ARGUMENTO DO MARTÍRIO</span>
-      <p>A transcrição distingue entre <strong style="color:var(--gold-light)">crença em um ideal</strong> (alguém pode morrer por algo que acredita ser verdade mas é mentira) e <strong style="color:var(--gold-light)">testemunho ocular</strong> (é psicologicamente quase impossível que um grupo inteiro morra por algo que eles sabem que inventaram). Diferente de fãs de Harry Potter ou Star Wars, os apóstolos alegavam ser testemunhas diretas do evento.</p>
+      <p>A transcrição distingue entre <strong style="color:var(--gold)">crença em um ideal</strong> (alguém pode morrer por algo que acredita ser verdade mas é mentira) e <strong style="color:var(--gold)">testemunho ocular</strong> (é psicologicamente quase impossível que um grupo inteiro morra por algo que eles sabem que inventaram). Diferente de fãs de Harry Potter ou Star Wars, os apóstolos alegavam ser testemunhas diretas do evento.</p>
     </div>
 
     <div class="divider"></div>
@@ -1055,10 +1055,10 @@
 <footer>
   <div class="logo">✝ Jesus Histórico</div>
   <p>Análise baseada na transcrição original · Fontes: Peter Stoner, Flávio Josefo, Cornélio Tácito, Plínio, o Moço, Paulo de Tarso</p>
-  <div style="margin-top: 28px; border-top: 1px solid rgba(201,168,76,0.15); padding-top: 24px;">
+  <div style="margin-top: 28px; border-top: 1px solid rgba(26,58,110,0.12); padding-top: 24px;">
     <p style="font-family:'Cinzel',serif; font-size:1rem; color:var(--gold); margin-bottom:6px;">Pr João Alves</p>
     <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:6px;">Vila Velha — ES</p>
-    <a href="https://www.radiomateus633.com" target="_blank" style="font-size:0.9rem; color:var(--gold-dim); text-decoration:none; transition:color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#7a6030'">www.radiomateus633.com</a>
+    <a href="https://www.radiomateus633.com" target="_blank" style="font-size:0.9rem; color:var(--gold-dim); text-decoration:none; transition:color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#2a4a7f'">www.radiomateus633.com</a>
   </div>
 </footer>
 
@@ -1107,9 +1107,9 @@
   right: 32px;
   width: 54px;
   height: 54px;
-  background: #0d1e35;
-  border: 1px solid #c9a84c;
-  color: #c9a84c;
+  background: #ffffff;
+  border: 1px solid #1a3a6e;
+  color: #1a3a6e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1120,8 +1120,8 @@
   transition: opacity 0.3s, background 0.3s, transform 0.3s;
   z-index: 999;
   box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-" onmouseover="this.style.background='#c9a84c';this.style.color='#050d1a';this.style.transform='translateY(-3px)'"
-   onmouseout="this.style.background='#0d1e35';this.style.color='#c9a84c';this.style.transform='translateY(0)'">↑</a>
+" onmouseover="this.style.background='#1a3a6e';this.style.color='#ffffff';this.style.transform='translateY(-3px)'"
+   onmouseout="this.style.background='#ffffff';this.style.color='#c9a84c';this.style.transform='translateY(0)'">↑</a>
 
 </body>
 </html>
